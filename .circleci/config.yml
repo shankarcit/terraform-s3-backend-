@@ -24,7 +24,7 @@ jobs:
       - run:
           name: terraform
           command: |
-            terraform apply -auto-approve tfapply -var="bucket-name=tf-state-abc-demo"
+            terraform apply -var="bucket-name=tf-state-abc-demo" -auto-approve tfapply 
       - persist_to_workspace:
           root: .
           paths:
